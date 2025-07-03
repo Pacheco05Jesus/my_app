@@ -17,7 +17,12 @@ class TransparentLoadingView extends StatelessWidget {
         // Indicador de carga centrado
         Center(
           child: CircularProgressIndicator(
-            color: Colors.white, // o cualquier color que se ajuste
+            color: Color.fromARGB(
+              255,
+              83,
+              241,
+              4,
+            ), // o cualquier color que se ajuste
           ),
         ),
       ],

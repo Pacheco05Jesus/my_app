@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ChatIA',
-      theme: ThemeData(primarySwatch: Colors.teal),
+      theme: ThemeData(primarySwatch: Colors.green),
       home: ChatScreen(),
     );
   }
@@ -70,7 +70,9 @@ class _ChatScreenState extends State<ChatScreen> {
         padding: EdgeInsets.all(12),
         constraints: BoxConstraints(maxWidth: 250),
         decoration: BoxDecoration(
-          color: message.isMe ? Colors.teal[200] : Colors.grey[300],
+          color: message.isMe
+              ? const Color.fromARGB(255, 3, 238, 46)
+              : Colors.grey[300],
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -108,7 +110,10 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             SizedBox(width: 8),
             IconButton(
-              icon: Icon(Icons.send, color: Colors.teal),
+              icon: Icon(
+                Icons.send,
+                color: const Color.fromARGB(255, 5, 150, 0),
+              ),
               onPressed: () => _sendMessage(_controller.text),
             ),
           ],
@@ -120,7 +125,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Chat Personalizado')),
+      appBar: AppBar(title: Text('ChatIA')),
       body: Column(
         children: [
           Expanded(
